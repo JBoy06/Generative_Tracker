@@ -1,0 +1,32 @@
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environments
+venv/
+env/
+*.egg-info/
+
+# Ignore video chunk files and outputs
+*.chunk.*
+*.output.*
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Logs and temp files
+*.log
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Shell history and backup files
+*.swp
+*.swo
+*~
+
+# Ignore test artifacts
+test_output/
