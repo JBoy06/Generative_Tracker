@@ -13,15 +13,19 @@ A parallel video processing toolkit using shell scripts and Python, optimized fo
 
 ## Requirements
 
-- GNU Parallel (`parallel`)
-- FFmpeg (`ffmpeg` and `ffprobe`)
+- Python 3
+- [Numpy](https://numpy.org/) (Python package)
+- [FFmpeg](https://ffmpeg.org/) (`ffmpeg` and `ffprobe` command-line tools)
+- [GNU Parallel](https://www.gnu.org/software/parallel/)
 - `bc` (calculator utility)
 - Bash shell (Linux/macOS recommended)
 
-Install dependencies on Ubuntu:
+### Installing dependencies (Ubuntu example)
+
 ```bash
 sudo apt-get update
-sudo apt-get install parallel ffmpeg bc
+sudo apt-get install parallel ffmpeg bc python3 python3-pip
+pip3 install -r requirements.txt
 ```
 
 ## Quick Start
@@ -46,13 +50,6 @@ sudo apt-get install parallel ffmpeg bc
 4. **Process only first N frames (for testing):**
    ```bash
    ./generative_tracker/run_parallel.sh input_video.mp4 output.mp4 --end-frame 500
-   ```
-
-5. **Batch processing:**
-   ```bash
-   ./generative_tracker/run_parallel.sh video1.mp4 out1.mp4 --cores 4 &
-   ./generative_tracker/run_parallel.sh video2.mp4 out2.mp4 --cores 4 &
-   wait
    ```
 
 ## Monitoring Progress
